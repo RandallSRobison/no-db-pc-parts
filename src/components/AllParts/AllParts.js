@@ -9,7 +9,8 @@ class AllParts extends Component {
         <h2>all parts</h2>
         {this.props.partsArr.length ? (
           this.props.partsArr.map(part => {
-            return <Part part={part} key={part.id} />;
+            return <Part part={part} key={part.id} updateFavStatus={this.props.updateFavStatus}
+            deletePart={this.props.deletePart}/>;
           })
         ) : (
           <div>Loading...</div>

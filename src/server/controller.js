@@ -56,20 +56,17 @@ const partsArr = [
 module.exports = {
   //adding our parts array (partsArr), this is our axios.get, or componentDidMount
   getParts: (req, res) => {
-    console.log("hit getParts");
     res.status(200).send(partsArr);
   },
   //adding a new part to our partsArr, this is the axios.post function
   addPart: (req, res) => {
-    console.log("hit addPart");
     let { name, type, make, favorite, image } = req.body;
-
     let newPart = {
       id,
       name,
       type,
       make,
-      favorite,
+      favStatus: favorite,
       image
     };
 
@@ -80,26 +77,27 @@ module.exports = {
   },
   //deleting a part at its id from the partsArr, this is axios.delete
   deletePart: (req, res) => {
-    console.log("hit deletePart");
     const { id } = req.params;
 
     let index = partsArr.findIndex(part => part.id === +id);
 
     partsArr.splice(index, 1);
 
+
     res.status(200).send(partsArr);
   },
 
   updateFavStatus: (req, res) => {
-    console.log("hit updateFavStatus");
     const { id } = req.params;
-    const { favStatus } = req.body
+    const { status } = req.body;
 
     let index = partsArr.findIndex(part => part.id === +id);
 
     let updatedPart = {
-        favStatus,
-    }
-    partsArry[index] = {...partsArr[index], ...updatedPart }
+      favStatus: status
+    };
+    partsArr[index] = { ...partsArr[index], ...updatedPart };
+
+    res.status(200).send(partsArr);
   }
 };

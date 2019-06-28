@@ -13,9 +13,9 @@ class AddPart extends Component {
   }
 
   handleChange = e => {
-    const { val, name } = e.target;
+    const { value, name } = e.target;
     this.setState({
-      [name]: val
+      [name]: value
     });
   };
 
@@ -23,7 +23,7 @@ class AddPart extends Component {
     e.preventDefault();
 
     const { name, type, make, image } = this.state;
-
+    console.log(name, type, make, image)
     let newPart = {
       name,
       type,
@@ -42,32 +42,43 @@ class AddPart extends Component {
   };
 
   render() {
-    console.log(this.props);
+    // console.log(this.props);
     const { name, type, make, image } = this.state;
     return (
       <div className="form container">
-        <form className="form"
-            onSubmit={this.addPart}>
-            <h1>new part creator</h1>
-            <input
-            name='name'
-            type='text'
+        <form className="form" onSubmit={this.addPart}>
+          <h1>new part creator</h1>
+          <input
+            name="name"
+            type="text"
             placeholder={`new part name: i.e. 9900K `}
             onChange={this.handleChange}
             value={name}
-            />
-            <input
-            name='type'
-            type='text'
-            placeholder='type of part: i.e. CPU'
+          />
+          <input
+            name="type"
+            type="text"
+            placeholder="type of part: i.e. CPU"
             onChange={this.handleChange}
-            />
-            <input 
-            name='make'
-            type='text'
-            placeholder=''
-            />
-
+            value={type}
+          />
+          <input
+            name="make"
+            type="text"
+            placeholder="company: i.e. Intel"
+            onChange={this.handleChange}
+            value={make}
+          />
+          <input
+            name="image"
+            type="text"
+            placeholder="image of part"
+            onChange={this.handleChange}
+            value={image}
+          />
+          <button className='add-part-button'>
+              add part
+          </button>
         </form>
       </div>
     );

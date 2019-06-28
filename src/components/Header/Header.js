@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './Header.css'
 
 class Header extends Component {
     constructor(){
@@ -11,15 +12,14 @@ class Header extends Component {
 
     render(){
         return(
-            <div>
-                Header
-                <button onClick={() => this.props.handleChangeView('AllParts')}>
+            <div className="nav-bar">
+                <button className="nav-buttons" onClick={() => this.props.handleChangeView('AllParts')}>
                     all parts
                 </button>
-                <button onClick={() => this.props.handleChangeView('FavoriteParts')}>
+                <button className="nav-buttons" onClick={() => this.props.handleChangeView('FavoriteParts')}>
                     favorite parts
                 </button>
-                <button onClick={() => this.props.handleChangeView('AddPart')}>
+                <button className="nav-buttons" onClick={() => this.props.handleChangeView('AddPart')}>
                     add part
                 </button>
             </div>

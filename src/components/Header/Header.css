@@ -1,0 +1,13 @@
+.nav-bar {
+    width: 100vw;
+    height: 10vh;
+    background-image: linear-gradient(-90deg, #530030, #7e0030, #ff5a3e, #ff7e4a, #ffdcc8, #feeadf ) ;
+    display: flex;
+    justify-content: ;
+    align-items: center;
+}
+
+.nav-buttons {
+    display: flex;
+    
+}

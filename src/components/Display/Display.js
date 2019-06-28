@@ -11,20 +11,16 @@ class Display extends Component {
     super();
     this.state = {
       view: "AllParts",
-      partsArr: [],
-      favoritedPart: {},
-      favStatus: false,
-      part: {}
+      partsArr: []
     };
-    this.deletePart = this.deletePart.bind.bind(this)
-    this.updateFavStatus = this.updateFavStatus.bind(this)
-    this.handleChangeView = this.handleChangeView.bind(this)
-    this.addPart = this.addPart.bind(this)
+    this.deletePart = this.deletePart.bind(this);
+    this.updateFavStatus = this.updateFavStatus.bind(this);
+    this.handleChangeView = this.handleChangeView.bind(this);
+    this.addPart = this.addPart.bind(this);
   }
 
   componentDidMount() {
     axios.get("/api/parts").then(res => {
-      console.log(res.data);
       this.setState({
         partsArr: res.data
       });
@@ -33,7 +29,6 @@ class Display extends Component {
 
   addPart(part) {
     axios.post("/api/part", part).then(res => {
-      console.log(res.data);
       this.setState({
         partsArr: res.data
       });
@@ -41,40 +36,46 @@ class Display extends Component {
   }
 
   deletePart(id) {
+      console.log('hit delete')
     axios.delete(`/api/part/${id}`).then(res => {
-      console.log(res.data);
       this.setState({
         partsArr: res.data
       });
     });
   }
 
-  updateFavStatus(id, part) {
-    axios.put(`/api/part/${id}`, part).then(res => {
-      console.log(res.data);
+  updateFavStatus(id, status) {
+    axios.put(`/api/part/${id}`, { status }).then(res => {
       this.setState({
-        partsArr: res.data,
-        favoritedPart: {}
+        partsArr: res.data
       });
     });
   }
 
   handleChangeView(view) {
-  this.setState({
+    this.setState({
       view: view
-  })
-}
-// NEXT ON TO DO: COMPONENTS. THEY DO NOT HAVE EXPORTS, THAT IS WHAT IS CAUSING ERROR.
+    });
+  }
+
   render() {
     return (
       <div>
         <Header handleChangeView={this.handleChangeView} />
         {this.state.view === "AllParts" ? (
-          <AllParts partsArr={this.state.partsArr}/>
+          <AllParts
+            updateFavStatus={this.updateFavStatus}
+            partsArr={this.state.partsArr}
+            deletePart={this.deletePart}
+          />
         ) : this.state.view === "FavoriteParts" ? (
-          <FavoriteParts partsArr={this.state.partsArr}/>
+          <FavoriteParts
+            updateFavStatus={this.updateFavStatus}
+            partsArr={this.state.partsArr}
+            deletePart={this.deletePart}
+          />
         ) : (
-          <AddPart />
+          <AddPart addPart={this.addPart} />
         )}
       </div>
     );

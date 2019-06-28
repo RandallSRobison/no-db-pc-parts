@@ -1,14 +1,53 @@
 import React, { Component } from "react";
+import "./Part.css";
 
 class Part extends Component {
   render() {
     return (
       <div className="part-container">
-        <img src={this.props.part.image} alt="pic" />
-        <div className="part-card">SKU: {this.props.part.name}</div>
-        <div className="part-card">Type: {this.props.part.type}</div>
-        <div className="part-card">Make:{this.props.part.make}</div>
-        <button className="part-card">fav{this.props.part.favStatus}</button>
+        <div className="part-cards">
+          <img src={this.props.part.image} alt="part-pic" id="images"/>
+          <div className="card-text">SKU: {this.props.part.name}</div>
+          <div className="card-text">Type: {this.props.part.type}</div>
+          <div className="card-text">Make:{this.props.part.make}</div>
+          <button
+            style={{
+              background: "none",
+              border: "none",
+              outline: "none"
+            }}
+            className="idk-yet"
+            onClick={() => {
+              this.props.updateFavStatus(
+                this.props.part.id,
+                !this.props.part.favStatus
+              );
+            }}
+          >
+            {this.props.part.favStatus ? (
+              <i
+                className="fas fa-heart"
+                style={{
+                  color: "red"
+                }}
+              />
+            ) : (
+              <i className="far fa-heart" />
+            )}
+          </button>
+          <button
+            style={{
+              background: "none",
+              border: "none",
+              outline: "none"
+            }}
+            onClick={() => {
+              this.props.deletePart(this.props.part.id);
+            }}
+          >
+            delete
+          </button>
+        </div>
       </div>
     );
   }

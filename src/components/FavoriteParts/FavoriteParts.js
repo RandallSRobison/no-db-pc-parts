@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Part from "../Part/Part";
 
 class FavoriteParts extends Component {
-
   render() {
     let filteredArray = this.props.partsArr.filter(part => part.favStatus);
     return (
@@ -10,7 +9,14 @@ class FavoriteParts extends Component {
         <h2>favorite parts</h2>
         {filteredArray.length ? (
           filteredArray.map(part => {
-            return <Part part={part} key={part.id} />;
+            return (
+              <Part
+                part={part}
+                key={part.id}
+                updateFavStatus={this.props.updateFavStatus}
+                deletePart={this.props.deletePart}
+              />
+            );
           })
         ) : (
           <div>Loading...</div>
