@@ -37,6 +37,6 @@
       "server"
     ]
 },
-"proxy": "http://localhost:4000",
+"proxy": "http://localhost:4500",
   "main": "./server./server.js"
 }

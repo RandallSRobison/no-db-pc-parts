@@ -12,6 +12,7 @@ class Header extends Component {
     render(){
         return(
             <div>
+                Header
                 <button onClick={() => this.props.handleChangeView('AllParts')}>
                     all parts
                 </button>

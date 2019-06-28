@@ -14,7 +14,7 @@ const partsArr = [
     name: "Ryzen 2700X",
     type: "CPU",
     make: "AMD",
-    favStatus: false,
+    favStatus: true,
     image: "https://i.ebayimg.com/images/i/283144042277-0-1/s-l1000.jpg"
   },
   {
@@ -31,7 +31,7 @@ const partsArr = [
     name: "RTX 2060 FE",
     type: "GPU",
     make: "Nvidia",
-    favStatus: false,
+    favStatus: true,
     image: "https://pbs.twimg.com/media/DwY_ADgXgAE4sAx.jpg"
   },
   {
@@ -39,7 +39,7 @@ const partsArr = [
     name: "Vengeance RGB Pro 16GB 2x8",
     type: "RAM",
     make: "Corsair",
-    favStatus: false,
+    favStatus: true,
     image:
       "https://www.jib.co.th/img_master/product/original/20180718091708_30510_21_1.jpg"
   },

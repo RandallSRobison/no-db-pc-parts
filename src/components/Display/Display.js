@@ -16,6 +16,10 @@ class Display extends Component {
       favStatus: false,
       part: {}
     };
+    this.deletePart = this.deletePart.bind.bind(this)
+    this.updateFavStatus = this.updateFavStatus.bind(this)
+    this.handleChangeView = this.handleChangeView.bind(this)
+    this.addPart = this.addPart.bind(this)
   }
 
   componentDidMount() {
@@ -27,8 +31,8 @@ class Display extends Component {
     });
   }
 
-  addPart() {
-    axios.post("/api/part").then(res => {
+  addPart(part) {
+    axios.post("/api/part", part).then(res => {
       console.log(res.data);
       this.setState({
         partsArr: res.data
@@ -66,12 +70,12 @@ class Display extends Component {
       <div>
         <Header handleChangeView={this.handleChangeView} />
         {this.state.view === "AllParts" ? (
-          <AllParts />
+          <AllParts partsArr={this.state.partsArr}/>
         ) : this.state.view === "FavoriteParts" ? (
-          <FavoriteParts />
+          <FavoriteParts partsArr={this.state.partsArr}/>
         ) : (
           <AddPart />
-        )};
+        )}
       </div>
     );
   }
