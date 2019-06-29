@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import "./AddPart.css";
 class AddPart extends Component {
   constructor() {
     super();
@@ -23,7 +23,7 @@ class AddPart extends Component {
     e.preventDefault();
 
     const { name, type, make, image } = this.state;
-    console.log(name, type, make, image)
+    console.log(name, type, make, image);
     let newPart = {
       name,
       type,
@@ -39,48 +39,55 @@ class AddPart extends Component {
       make: "",
       image: ""
     });
+    this.props.handleViewOnAdd();
   };
 
   render() {
     // console.log(this.props);
     const { name, type, make, image } = this.state;
     return (
-      <div className="form container">
-        <form className="form" onSubmit={this.addPart}>
-          <h1>new part creator</h1>
-          <input
-            name="name"
-            type="text"
-            placeholder={`new part name: i.e. 9900K `}
-            onChange={this.handleChange}
-            value={name}
-          />
-          <input
-            name="type"
-            type="text"
-            placeholder="type of part: i.e. CPU"
-            onChange={this.handleChange}
-            value={type}
-          />
-          <input
-            name="make"
-            type="text"
-            placeholder="company: i.e. Intel"
-            onChange={this.handleChange}
-            value={make}
-          />
-          <input
-            name="image"
-            type="text"
-            placeholder="image of part"
-            onChange={this.handleChange}
-            value={image}
-          />
-          <button className='add-part-button'>
-              add part
-          </button>
-        </form>
-      </div>
+      <div className="form-container">
+          <form className="form" onSubmit={this.addPart}>
+            <h1>new part creator</h1>
+            <input className='input-field'
+              name="name"
+              type="text"
+              placeholder="       name"
+              onFocus={(e) => e.target.placeholder = ''}
+              onBlur={(e) => e.target.placeholder = '      name'}
+              onChange={this.handleChange}
+              value={name}
+            />
+            <input className='input-field'
+              name="type"
+              type="text"
+              placeholder="       type"
+              onFocus={(e) => e.target.placeholder = ''}
+              onBlur={(e) => e.target.placeholder = '      type'}
+              onChange={this.handleChange}
+              value={type}
+            />
+            <input className='input-field'
+              name="make"
+              type="text"
+              placeholder="       company"
+              onFocus={(e) => e.target.placeholder = ''}
+              onBlur={(e) => e.target.placeholder = '      company'}
+              onChange={this.handleChange}
+              value={make}
+            />
+            <input className='input-field'
+              name="image"
+              type="text"
+              placeholder="       image url"
+              onFocus={(e) => e.target.placeholder = ''}
+              onBlur={(e) => e.target.placeholder = '      image url'}
+              onChange={this.handleChange}
+              value={image}
+            />
+            <button className="add-part-button">add part</button>
+          </form>
+        </div>
     );
   }
 }

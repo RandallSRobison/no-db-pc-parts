@@ -13,15 +13,17 @@ class Header extends Component {
     render(){
         return(
             <div className="nav-bar">
-                <button className="nav-buttons" onClick={() => this.props.handleChangeView('AllParts')}>
+              <div className="button-container">
+                <button id="grow" onClick={() => this.props.handleChangeView('AllParts')}>
                     all parts
                 </button>
-                <button className="nav-buttons" onClick={() => this.props.handleChangeView('FavoriteParts')}>
+                <button className="grow" onClick={() => this.props.handleChangeView('FavoriteParts')}>
                     favorite parts
                 </button>
-                <button className="nav-buttons" onClick={() => this.props.handleChangeView('AddPart')}>
-                    add part
+                <button className="grow" onClick={() => this.props.handleChangeView('AddPart')}>
+                    add new part
                 </button>
+            </div>
             </div>
         )
     }

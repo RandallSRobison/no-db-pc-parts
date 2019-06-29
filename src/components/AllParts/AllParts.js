@@ -6,7 +6,6 @@ class AllParts extends Component {
   render() {
     return (
       <div>
-        <h2>all parts</h2>
         {this.props.partsArr.length ? (
           this.props.partsArr.map(part => {
             return <Part part={part} key={part.id} updateFavStatus={this.props.updateFavStatus}

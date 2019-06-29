@@ -17,6 +17,7 @@ class Display extends Component {
     this.updateFavStatus = this.updateFavStatus.bind(this);
     this.handleChangeView = this.handleChangeView.bind(this);
     this.addPart = this.addPart.bind(this);
+    this.handleViewOnAdd = this.handleViewOnAdd.bind(this)
   }
 
   componentDidMount() {
@@ -58,6 +59,12 @@ class Display extends Component {
     });
   }
 
+handleViewOnAdd(view) {
+    this.setState({
+        view: "AllParts"
+    })
+}
+
   render() {
     return (
       <div>
@@ -75,7 +82,7 @@ class Display extends Component {
             deletePart={this.deletePart}
           />
         ) : (
-          <AddPart addPart={this.addPart} />
+          <AddPart addPart={this.addPart} handleViewOnAdd={this.handleViewOnAdd}/>
         )}
       </div>
     );

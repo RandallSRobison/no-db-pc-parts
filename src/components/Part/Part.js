@@ -7,16 +7,15 @@ class Part extends Component {
       <div className="part-container">
         <div className="part-cards">
           <img src={this.props.part.image} alt="part-pic" id="images"/>
-          <div className="card-text">SKU: {this.props.part.name}</div>
+          <div className="card-text">Name: {this.props.part.name}</div>
           <div className="card-text">Type: {this.props.part.type}</div>
-          <div className="card-text">Make:{this.props.part.make}</div>
+          <div className="card-text">Make: {this.props.part.make}</div>
           <button
             style={{
               background: "none",
               border: "none",
               outline: "none"
             }}
-            className="idk-yet"
             onClick={() => {
               this.props.updateFavStatus(
                 this.props.part.id,
@@ -35,7 +34,7 @@ class Part extends Component {
               <i className="far fa-heart" />
             )}
           </button>
-          <button
+          <button className="delete-button"
             style={{
               background: "none",
               border: "none",
