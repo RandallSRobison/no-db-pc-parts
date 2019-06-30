@@ -1,0 +1,9 @@
+.fav-parts-container {
+    width: 100vw;
+    height: 89vh;
+    background: #498C8A;
+    overflow-y: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}

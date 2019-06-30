@@ -1,27 +1,27 @@
 
 .form-container {
     width: 100vw;
-    height: 100vh;
-    background: #98ADBF;
+    height: 89vh;
+    background: #498C8A;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-h1 {
-    font-size: 3rem;
-    color: #F0B757;
-}
-
 .form {
     width: 500px;
     height: 500px;
-    background-color: #2A445D;
+    background-color: #006E90;
+    color: #f4f6f2;
+    font-size: 2.2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 75px;
     border-radius: 8px;
+}
+
+.form:hover {
+    color: #F46036;
 }
 
 .input-field {
@@ -36,7 +36,7 @@ h1 {
 }
 
 ::placeholder {
-    color: #2A445D;
+    color: #210203;
 }
 
 .add-part-button {
@@ -51,7 +51,7 @@ h1 {
 
 .add-part-button:hover {
     transform: scale(1.2);
-    background-color: #987784;
+    background-color: #F46036;
     color: #F4F6F2;
 }
 

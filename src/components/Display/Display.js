@@ -67,7 +67,7 @@ handleViewOnAdd(view) {
 
   render() {
     return (
-      <div>
+      <div className="display-col">
         <Header handleChangeView={this.handleChangeView} />
         {this.state.view === "AllParts" ? (
           <AllParts

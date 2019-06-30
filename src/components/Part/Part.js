@@ -4,17 +4,27 @@ import "./Part.css";
 class Part extends Component {
   render() {
     return (
-      <div className="part-container">
+      <>
         <div className="part-cards">
           <img src={this.props.part.image} alt="part-pic" id="images"/>
-          <div className="card-text">Name: {this.props.part.name}</div>
-          <div className="card-text">Type: {this.props.part.type}</div>
-          <div className="card-text">Make: {this.props.part.make}</div>
-          <button
+          <div className='row-details'>
+            <p className="card-text">Name:</p>
+            <p className="card-text">{this.props.part.name}</p>
+          </div>
+          <div className='row-details'>
+            <p className="card-text">Type:</p>
+            <p className="card-text">{this.props.part.type}</p>
+          </div>
+          <div className='row-details'> 
+            <p className="card-text">Make:</p>
+            <p className="card-text">{this.props.part.make}</p>
+        </div>
+          <div className='row-details'>
+          <button className='fav-button'
             style={{
               background: "none",
               border: "none",
-              outline: "none"
+              outline: "none",
             }}
             onClick={() => {
               this.props.updateFavStatus(
@@ -27,7 +37,7 @@ class Part extends Component {
               <i
                 className="fas fa-heart"
                 style={{
-                  color: "red"
+                  color: "#F46036"
                 }}
               />
             ) : (
@@ -36,7 +46,6 @@ class Part extends Component {
           </button>
           <button className="delete-button"
             style={{
-              background: "none",
               border: "none",
               outline: "none"
             }}
@@ -47,7 +56,8 @@ class Part extends Component {
             delete
           </button>
         </div>
-      </div>
+        </div>
+      </>
     );
   }
 }

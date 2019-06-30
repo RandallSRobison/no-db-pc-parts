@@ -48,7 +48,7 @@ class AddPart extends Component {
     return (
       <div className="form-container">
           <form className="form" onSubmit={this.addPart}>
-            <h1>new part creator</h1>
+            new part creator
             <input className='input-field'
               name="name"
               type="text"
@@ -79,7 +79,7 @@ class AddPart extends Component {
             <input className='input-field'
               name="image"
               type="text"
-              placeholder="       image url"
+              placeholder="       image url: 1kx1k res"
               onFocus={(e) => e.target.placeholder = ''}
               onBlur={(e) => e.target.placeholder = '      image url'}
               onChange={this.handleChange}
