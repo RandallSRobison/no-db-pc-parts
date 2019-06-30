@@ -15,7 +15,7 @@ class Header extends Component {
         return(
             <div className="nav-bar">
                 <div className="logo">
-                    <img src={Logo} alt=""/>
+                    <img src={Logo} alt=""onClick={() => this.props.handleChangeView('AllParts')}/>
                 </div>
                 <div className="button-container">
                     <button id="grow" onClick={() => this.props.handleChangeView('AllParts')}>all parts</button>

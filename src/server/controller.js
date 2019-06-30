@@ -13,7 +13,7 @@ const partsArr = [
     name: "Ryzen 2700X",
     type: "CPU",
     make: "AMD",
-    favStatus: false,
+    favStatus: true,
     image: "https://bit.ly/2IZw19m"
   },
   {
@@ -45,7 +45,7 @@ const partsArr = [
     name: "RTX TITAN",
     type: "GPU",
     make: "Nvidia",
-    favStatus: false,
+    favStatus: true,
     image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6320/6320585_sd.jpg"
   },
   {
@@ -77,7 +77,7 @@ const partsArr = [
     name: "Ryzen 2600",
     type: "CPU",
     make: "AMD",
-    favStatus: false,
+    favStatus: true,
     image: "https://images-na.ssl-images-amazon.com/images/I/51W-O4Jn9EL._SL1000_.jpg"
   },
   {

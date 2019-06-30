@@ -1,7 +1,7 @@
 .nav-bar {
     width: 100vw;
     height: 11vh;
-    background-color: #006E90;
+    background: linear-gradient(90deg, #002348 20%,#006E90 80%);
     display: flex;
     align-items: center;
     justify-content: flex-end;
