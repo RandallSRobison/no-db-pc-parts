@@ -6,7 +6,7 @@ const partsArr = [
     type: "CPU",
     make: "Intel",
     favStatus: true,
-    image: "https://bit.ly/2RIGKHP"
+    image: "https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com//512483_831362_01_front_zoom.jpg"
   },
   {
     id: 2,
@@ -14,7 +14,7 @@ const partsArr = [
     type: "CPU",
     make: "AMD",
     favStatus: true,
-    image: "https://bit.ly/2IZw19m"
+    image: "https://i.ebayimg.com/images/i/283144042277-0-1/s-l1000.jpg"
   },
   {
     id: 3,
@@ -22,7 +22,7 @@ const partsArr = [
     type: "GPU",
     make: "EVGA",
     favStatus: true,
-    image: "https://bit.ly/300JeEb"
+    image: "https://www.vali.bg/UserFiles/Product/gallery_1/0BB7D73D-93DF-2971-5F25-501391A51802.jpg?w=1000&h=1000&block&cache"
   },
   {
     id: 4,
@@ -38,7 +38,7 @@ const partsArr = [
     type: "RAM",
     make: "Corsair",
     favStatus: false,
-    image: "https://bit.ly/2JeQ8iE"
+    image: "https://www.jib.co.th/img_master/product/original/20180718091708_30510_21_1.jpg"
   },
   {
     id: 6,

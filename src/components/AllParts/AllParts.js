@@ -9,7 +9,7 @@ class AllParts extends Component {
             <Part part={part} key={part.id} updateFavStatus={this.props.updateFavStatus} deletePart={this.props.deletePart}/>
         ))
     ) : (
-        <div>Loading...</div>
+        <div>Oops! Nothing to show.. yet? Um.. wow this is embarrassing. Please don't look at me.</div>
     )
     return (
       <div className="all-parts-container">

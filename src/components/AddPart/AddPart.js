@@ -79,7 +79,7 @@ class AddPart extends Component {
             <input className='input-field'
               name="image"
               type="text"
-              placeholder="       image url: 1kx1k res"
+              placeholder="       image url"
               onFocus={(e) => e.target.placeholder = ''}
               onBlur={(e) => e.target.placeholder = '      image url'}
               onChange={this.handleChange}

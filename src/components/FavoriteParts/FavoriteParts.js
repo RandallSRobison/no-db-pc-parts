@@ -16,7 +16,7 @@ class FavoriteParts extends Component {
         )
       )
     ) : (
-      <div>Loading...</div>
+      <div>Oops! Nothing to show.. yet? Um.. wow this is embarrassing. Please don't look at me.</div>
     )
     return (
       <div className="fav-parts-container">
