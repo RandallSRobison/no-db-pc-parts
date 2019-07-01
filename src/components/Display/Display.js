@@ -24,6 +24,9 @@ class Display extends Component {
     axios.get("/api/parts").then(res => {
       this.setState({
         partsArr: res.data
+        .catch(err => {
+          console.log('error', err);
+        })
       });
     });
   }
@@ -32,6 +35,9 @@ class Display extends Component {
     axios.post("/api/part", part).then(res => {
       this.setState({
         partsArr: res.data
+        .catch(err => {
+          console.log('error', err);
+        })
       });
     });
   }
@@ -41,6 +47,9 @@ class Display extends Component {
     axios.delete(`/api/part/${id}`).then(res => {
       this.setState({
         partsArr: res.data
+        .catch(err => {
+          console.log('error', err);
+        })
       });
     });
   }
@@ -49,6 +58,9 @@ class Display extends Component {
     axios.put(`/api/part/${id}`, { status }).then(res => {
       this.setState({
         partsArr: res.data
+        .catch(err => {
+          console.log('error', err);
+        })
       });
     });
   }
@@ -56,12 +68,18 @@ class Display extends Component {
   handleChangeView(view) {
     this.setState({
       view: view
+      .catch(err => {
+        console.log('error', err);
+      })
     });
   }
 
 handleViewOnAdd(view) {
     this.setState({
         view: "AllParts"
+        .catch(err => {
+          console.log('error', err);
+        })
     })
 }
 
