@@ -1,4 +1,4 @@
-let id = 21;
+let id = 25;
 const partsArr = [
   {
     id: 1,
@@ -159,8 +159,39 @@ const partsArr = [
     make: "ASUS",
     favStatus: false,
     image: "https://i.ebayimg.com/images/i/123511160131-0-1/s-l1000.jpg"
+  },
+  {
+    id: 21,
+    name: "i7-8086K Limited Edition",
+    type: "CPU",
+    make: "Intel",
+    favStatus: false,
+    image: "https://www.evetech.co.za/repository/ProductImages/intel-core-i7-8086k-cpu-1000px-v1-0003.jpg"
+  },
+  {
+    id: 22,
+    name: "i9-7900X",
+    type: "CPU",
+    make: "Intel",
+    favStatus: false,
+    image: "https://images-na.ssl-images-amazon.com/images/I/61dWAFnwqPL._SL1000_.jpg"
+  },
+  {
+    id: 23,
+    name: "MAXIMUS XI EXTREME Z390",
+    type: "Motherboard",
+    make: "ASUS",
+    favStatus: false,
+    image: "https://uk.store.asus.com/media/catalog/product/cache/1/image/85e4522595efc69f496374d01ef2bf13/9/0/90MB0XQ0_1..jpg"
+  },
+  {
+    id: 24,
+    name: "Threadripper 2990WX",
+    type: "CPU",
+    make: "AMD",
+    favStatus: false,
+    image: "https://www.jib.co.th/img_master/product/original/2018080817452230887_1.jpg"
   }
-  
 ];
 
 module.exports = {
