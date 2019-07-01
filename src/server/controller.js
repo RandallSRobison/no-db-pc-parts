@@ -1,4 +1,4 @@
-let id = 25;
+let id = 26;
 const partsArr = [
   {
     id: 1,
@@ -191,7 +191,7 @@ const partsArr = [
     make: "AMD",
     favStatus: false,
     image: "https://www.jib.co.th/img_master/product/original/2018080817452230887_1.jpg"
-  }
+  },
 ];
 
 module.exports = {
