@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./AddPart.css";
+
 class AddPart extends Component {
   constructor() {
     super();
