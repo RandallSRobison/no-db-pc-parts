@@ -9,12 +9,12 @@ class AllParts extends Component {
             <Part part={part} key={part.id} updateFavStatus={this.props.updateFavStatus} deletePart={this.props.deletePart}/>
         ))
     ) : (
-        <div>Oops! Nothing to show.. yet? Um.. wow this is embarrassing. Please don't look at me.</div>
+        <p>Oops! Nothing to show.. yet? Um.. wow this is embarrassing. Please don't look at me.</p>
     )
     return (
-      <div className="all-parts-container">
+      <section className="all-parts-container">
         {allParts}
-      </div>
+      </section>
     );
   }
 }

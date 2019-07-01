@@ -16,12 +16,12 @@ class FavoriteParts extends Component {
         )
       )
     ) : (
-      <div>Oops! Nothing to show.. yet? Um.. wow this is embarrassing. Please don't look at me.</div>
+      <p>Oops! Nothing to show.. yet? Um.. wow this is embarrassing. Please don't look at me.</p>
     )
     return (
-      <div className="fav-parts-container">
+      <section className="fav-parts-container">
         {favoriteParts}
-      </div>
+      </section>
     );
   }
 }

@@ -13,16 +13,16 @@ class Header extends Component {
 
     render(){
         return(
-            <div className="nav-bar">
+            <nav className="nav-bar">
                 <div className="logo">
                     <img src={Logo} alt=""onClick={() => this.props.handleChangeView('AllParts')}/>
                 </div>
-                <div className="button-container">
+                <section className="button-container">
                     <button id="grow" onClick={() => this.props.handleChangeView('AllParts')}>all parts</button>
                     <button className="grow" onClick={() => this.props.handleChangeView('FavoriteParts')}>favorite parts</button>
                     <button className="grow" onClick={() => this.props.handleChangeView('AddPart')}>add new part</button>
-                </div>
-            </div>
+                </section>
+            </nav>
         )
     }
 }

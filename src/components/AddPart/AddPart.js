@@ -47,7 +47,7 @@ class AddPart extends Component {
     // console.log(this.props);
     const { name, type, make, image } = this.state;
     return (
-      <div className="form-container">
+      <section className="form-container">
           <form className="form" onSubmit={this.addPart}>
             new part creator
             <input className='input-field'
@@ -88,7 +88,7 @@ class AddPart extends Component {
             />
             <button className="add-part-button">add part</button>
           </form>
-        </div>
+        </section>
     );
   }
 }
