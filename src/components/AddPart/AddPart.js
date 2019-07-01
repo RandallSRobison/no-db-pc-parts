@@ -53,36 +53,36 @@ class AddPart extends Component {
             <input className='input-field'
               name="name"
               type="text"
-              placeholder="       name"
+              placeholder="name"
               onFocus={(e) => e.target.placeholder = ''}
-              onBlur={(e) => e.target.placeholder = '      name'}
+              onBlur={(e) => e.target.placeholder = 'name'}
               onChange={this.handleChange}
               value={name}
             />
             <input className='input-field'
               name="type"
               type="text"
-              placeholder="       type"
+              placeholder="type"
               onFocus={(e) => e.target.placeholder = ''}
-              onBlur={(e) => e.target.placeholder = '      type'}
+              onBlur={(e) => e.target.placeholder = 'type'}
               onChange={this.handleChange}
               value={type}
             />
             <input className='input-field'
               name="make"
               type="text"
-              placeholder="       company"
+              placeholder="company"
               onFocus={(e) => e.target.placeholder = ''}
-              onBlur={(e) => e.target.placeholder = '      company'}
+              onBlur={(e) => e.target.placeholder = 'company'}
               onChange={this.handleChange}
               value={make}
             />
             <input className='input-field'
               name="image"
               type="text"
-              placeholder="       image url"
+              placeholder="image url"
               onFocus={(e) => e.target.placeholder = ''}
-              onBlur={(e) => e.target.placeholder = '      image url'}
+              onBlur={(e) => e.target.placeholder = 'image url'}
               onChange={this.handleChange}
               value={image}
             />

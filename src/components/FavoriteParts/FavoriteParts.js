@@ -16,7 +16,7 @@ class FavoriteParts extends Component {
         )
       )
     ) : (
-      <p>Oops! Nothing to show.. yet? Um.. wow this is embarrassing. Please don't look at me.</p>
+      <h2>Oops! Nothing to show.. yet? Um.. wow this is embarrassing. Please don't look at me.</h2>
     )
     return (
       <section className="fav-parts-container">
